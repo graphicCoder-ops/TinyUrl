@@ -5,21 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nigga</title>
-    <link href="main.css" rel="stylesheet"></link>
+    <link href="/main.css" rel="stylesheet">
+    </link>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
     <div class="maindiv">
-     <div class="container1">
-      <input type="text" id="urlText">
-      <button  onclick="onbtnclick()"> Convert URL</button>
-     </div>
-     <p >Your Short URL: </p>
-     <a id="displayURL"></a>
-     <i class='bx bx-copy'></i>
+        <div class="container1">
+            <input type="text" id="urlText">
+            <button onclick="onbtnclick()"> Convert URL</button>
+        </div>
+        <div style="display: flex; flex-direction: row; margin:0.6rem;align-items: center;">
+            <div class="mono">Your Short URL: </div>
+            <div id="ptag"></div>
+        </div>
+        <div class="copyurl">
+            <a id="displayURL">http://127.0.0.1:5500/static/main.htm</a>
+            <i id="copyicon" class='bx bx-copy' onclick="onCopyClicked()"></i>
+        </div>
     </div>
-    <script src="client.js"></script>
+    <script src="/client.js"></script>
 </body>
 
 </html>

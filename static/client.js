@@ -1,8 +1,10 @@
 console.log("Script started!")
 var urlElement = document.getElementById("urlText");
 var displayURL = document.getElementById("displayURL");
+var ptag=document.getElementById("ptag");
 function onbtnclick() {
     console.log("On Click!");
+    ptag.style.display="none";
     fetch(`${document.location.href}api/linkgenerator`, {
         method: "POST",
         body: JSON.stringify({
@@ -19,4 +21,10 @@ function onbtnclick() {
    
 }
 
+
+function onCopyClicked(){
+    navigator.clipboard.writeText(displayURL.innerHTML);
+    ptag.style.display="block";
+    ptag.innerHTML= " link Copied to Cliboard!"
+}
 //console.log("HELLO WORKS"+reponse);

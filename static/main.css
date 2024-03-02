@@ -7,32 +7,45 @@ body {
 }
 
 .maindiv{
-    
+    backdrop-filter: blur(10px);
     margin:auto;
     padding:2rem;
     display: flex;
     flex-direction: column;
+    background-color: rgba(240, 248, 255, 0.511);
+    border-radius: 10px;
 }
 
 .container1{
-    background-color: #178fdf;
+    box-shadow: rgb(108, 107, 107) 0px 2px 5px;
+    border-radius: 4px;
+    display: flex;
+    
 }
 
 #urlText{
     background: white;
-    padding:0.24rem;
+    padding:0.34rem;
+    padding-left:0.6rem;
     width:70vw;
     font-size: 1.2rem;
     border:none;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 
+#urlText:focus{
+    outline: none;
+    caret-color: #178fdf;
+}
 button{
     font-family:Arial, Helvetica, sans-serif;
     background-color:#40A2E3;
     color:white;
-    padding:0.24rem;
+    padding:0.34rem;
     font-size: 1.2rem;
-    border-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
     border:none;
 }
 
@@ -40,12 +53,48 @@ button:hover{
     background-color:#178fdf;
     cursor: pointer;
 }
-div:hover {
-    border-radius: 0;
+
+.copyurl{
+    background-color: white;
+    border-radius: 4px;
+    padding-left: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-p{
+#copyicon{
+    padding:0.4rem;
+}
+
+#copyicon:hover{
+    background-color: rgb(209, 208, 208);
+    cursor: pointer;
+}
+
+#copyicon:active{
+    background-color: aquamarine;
+}
+
+a{
+    color:black;
+    font-style:none;
+}
+
+.mono{
     color:white;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 1.2rem;
-    padding: 0.24rem;
+}
+
+
+#ptag{
+    color:rgb(102, 255, 72);
+    background-color: rgba(0, 0, 0, 0.694);
+    display: none;
+    padding:0.2rem;
+    font-weight: 900;
+    margin-left:1rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
 }

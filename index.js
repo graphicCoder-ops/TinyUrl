@@ -1,18 +1,29 @@
 const uidlib =require('uid');
 const express = require("express");
-const data= require("./data");
 const con = require("./config/db");
-
 require('dotenv').config();
 
 const app = express();
 
 app.use(express.json());
 
+//app.use(express.static("static"));
+
 app.get("/",(req,res)=>{
     res.sendFile(__dirname+'\\static\\main.htm');
 });
 
+app.get("/main.css",(req,res)=>{
+    res.sendFile(__dirname+'\\static\\main.css');
+});
+
+app.get("/client.js",(req,res)=>{
+    res.sendFile(__dirname+'\\static\\client.js');
+});
+
+app.get("/",(req,res)=>{
+    res.sendFile(__dirname+'\\static\\main.htm');
+});
 app.post("/api/linkgenerator",(req,res)=>{
     shortUrlID = uidlib.uid(8);
     longUrl = req.body.longURL;
