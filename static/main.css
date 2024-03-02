@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    background: linear-gradient(45deg, blue, red);
+    background-repeat: no-repeat;
+    height: 100vh;
+    display:flex;
+}
+
+.maindiv{
+    
+    margin:auto;
+    padding:2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.container1{
+    background-color: #178fdf;
+}
+
+#urlText{
+    background: white;
+    padding:0.24rem;
+    width:70vw;
+    font-size: 1.2rem;
+    border:none;
+}
+
+button{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:#40A2E3;
+    color:white;
+    padding:0.24rem;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    border:none;
+}
+
+button:hover{
+    background-color:#178fdf;
+    cursor: pointer;
+}
+div:hover {
+    border-radius: 0;
+}

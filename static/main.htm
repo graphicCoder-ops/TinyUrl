@@ -5,57 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nigga</title>
-    <style>
-        body {
-            margin: 0;
-            background: linear-gradient(45deg, blue, red);
-            background-repeat: no-repeat;
-            height: 1080px;
-        }
-
-        div {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background-color: aqua;
-            transition: 0.5s;
-        }
-
-        div:hover {
-            border-radius: 0;
-        }
-    </style>
+    <link href="main.css" rel="stylesheet"></link>
 </head>
 
 <body>
-
+    <div class="maindiv">
+    <div class="container1">
     <input type="text" id="urlText" value="NOTOTOTOOT">
-    <button onclick="onbtnclick()"> Convert URL</button>
+    <button  onclick="onbtnclick()"> Convert URL</button>
+    </div>
     <p >Your Short URL: </p>
     <a id="displayURL"></a>
-
-    <script>
-        var urlElement = document.getElementById("urlText");
-        var displayURL = document.getElementById("displayURL");
-        function onbtnclick() {
-            fetch(`${document.location.href}api/linkgenerator`, {
-                method: "POST",
-                body: JSON.stringify({
-                    longURL: urlElement.value
-                }),
-                headers: {
-                    "Content-type": "application/json; charset=UTF-8"
-                }
-            }).then((response) => response.json()).then((json) => {
-                console.log(json);
-                displayURL.href = document.location.href + json.short;
-                displayURL.innerHTML = document.location.href + json.short;
-            });
-
-        }
-
-        //console.log("HELLO WORKS"+reponse);
-    </script>
+    </div>
+    <script src="client.js"></script>
 </body>
 
 </html>
