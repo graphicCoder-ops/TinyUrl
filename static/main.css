@@ -43,3 +43,9 @@ button:hover{
 div:hover {
     border-radius: 0;
 }
+
+p{
+    color:white;
+    font-size: 1.2rem;
+    padding: 0.24rem;
+}
