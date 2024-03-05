@@ -21,9 +21,7 @@ app.get("/client.js",(req,res)=>{
     res.sendFile(__dirname+'\\static\\client.js');
 });
 
-app.get("/",(req,res)=>{
-    res.sendFile(__dirname+'\\static\\main.htm');
-});
+
 app.post("/api/linkgenerator",(req,res)=>{
     shortUrlID = uidlib.uid(8);
     longUrl = req.body.longURL;
