@@ -46,6 +46,6 @@ app.get("/:uid",(req,res)=>{
     })
 });
 
-app.listen(process.env.PORT,()=>{
+app.listen(process.env.PORT,'0.0.0.0',()=>{
     console.log("Our website is hosting at http://localhost:"+process.env.PORT);
 });
