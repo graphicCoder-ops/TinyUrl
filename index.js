@@ -10,15 +10,15 @@ app.use(express.json());
 //app.use(express.static("static"));
 
 app.get("/",(req,res)=>{
-    res.sendFile(__dirname+'\\static\\main.htm');
+    res.sendFile(__dirname+'/static/main.htm');
 });
 
 app.get("/main.css",(req,res)=>{
-    res.sendFile(__dirname+'\\static\\main.css');
+    res.sendFile(__dirname+'/static/main.css');
 });
 
 app.get("/client.js",(req,res)=>{
-    res.sendFile(__dirname+'\\static\\client.js');
+    res.sendFile(__dirname+'/static/client.js');
 });
 
 
